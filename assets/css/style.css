@@ -1,7 +1,7 @@
 .madski-logo {
-    width: 46%;
-    height: 305px;
-    margin-left: 26%;
+    width: 42%;
+    height: 281px;
+    margin-left: 29%;
     background-color: black;
 }
 
@@ -10,4 +10,18 @@ nav {
 }
 footer{
     background-color: #171e28 !important;
+}
+.exotic-banner{
+    width: 90%;
+    height: 500px;
+    margin-left: 3%;
+}
+.btn{
+    background-color: goldenrod;
+}
+.bently-image{
+    width:100%;
+}
+p{
+    color: black !important;
 }
