@@ -1,7 +1,7 @@
 .madski-logo {
-    width: 42%;
-    height: 281px;
-    margin-left: 29%;
+    width: 32%;
+    height: 238px;
+    margin-left: 35%;
     background-color: black;
 }
 
@@ -24,4 +24,19 @@ footer{
 }
 p{
     color: black !important;
+}
+.huracanconvert{
+    width:80%;
+ 
+}
+.lamborghini-dash{
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
+    height: 645px;
+}
+.description{
+    font-size: 175%;
+}
+.video{
+    margin-left:26%;
 }
