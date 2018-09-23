@@ -1,0 +1,19 @@
+{
+  "name": "lux-car-rental",
+  "version": "1.0.0",
+  "description": "backend code for web project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalieshapickering/lux-car-rental.git"
+  },
+  "author": "Kaliesha Pickering, Arvin Zojaji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalieshapickering/lux-car-rental/issues"
+  },
+  "homepage": "https://github.com/kalieshapickering/lux-car-rental#readme"
+}
