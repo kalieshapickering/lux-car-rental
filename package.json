@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kalieshapickering/lux-car-rental/issues"
   },
-  "homepage": "https://github.com/kalieshapickering/lux-car-rental#readme"
+  "homepage": "https://github.com/kalieshapickering/lux-car-rental#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
