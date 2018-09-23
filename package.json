@@ -18,6 +18,7 @@
   "homepage": "https://github.com/kalieshapickering/lux-car-rental#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "next": "^7.0.0",
     "react": "^16.5.2"
   }
 }
