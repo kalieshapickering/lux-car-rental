@@ -26,7 +26,6 @@ module.exports = setStatics = function (appMod, pathMod) {
     function setStaticRoute(route, fileName) {
         appMod.get(route, function (req, res) {
             res.sendFile(pathMod.join(__dirname, "..", "pages", fileName + ".html"));
-            res.end();
         });
     }
     // vehicle routes
