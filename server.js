@@ -6,7 +6,11 @@ const path = require("path");
 
 // install helmet 
 const helmet = require("helmet");
-require(path.join(__dirname, "app", "security", "blocking.js"))(app, helmet);
+app.use(helmet());
+
+// CSP temporarily disabled for development
+// const whitelist = require(path.join(__dirname, "app", "assets", "security", "whitelist.js"));
+// app.use(helmet.contentSecurityPolicy(whitelist));
 
 // install body-parser as middleware
 const bodyParser = require("body-parser");
