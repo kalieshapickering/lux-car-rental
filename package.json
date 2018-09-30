@@ -20,12 +20,7 @@
   },
   "homepage": "https://github.com/kalieshapickering/lux-car-rental#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "helmet": "^3.13.0",
-    "moment": "^2.22.2",
-    "node-calendar": "^0.1.5",
-    "request": "^2.88.0"
+    "express-handlebars": "^3.0.0"
   }
 }
