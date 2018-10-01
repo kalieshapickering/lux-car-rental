@@ -1,3 +1,6 @@
+p{
+    line-height: 200%;
+}
 .quantum-logo {
     width: 61%;
     margin-left: 21%;
@@ -62,7 +65,7 @@ p {
 .line {
     margin-top: 9px;
     width: 280px;
-    background: goldenrod;
+    background: #ffe57f;
     height: 10px;
     float: left;
 }
@@ -102,4 +105,7 @@ p {
 
 .tech-specs {
     width: 30%;
+}
+.contactUs{
+    margin-left: 40% !important;
 }
