@@ -6,35 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>QUANTUM MANAGEMENT</title>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="icon" type="image/png" href="/assets/images/quantum.jpg">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="icon" type="image/png" href="quantum.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <nav class="nav-extended">
-            <a href="/"><img src="/assets/images/madski.png" class="madski-logo" alt="logo"></a>
-            <div class="nav-wrapper">
+        <nav class="nav-extended white">
+            <a href="/"><img src="quantum-gold-blk.jpg" class="quantum-logo" alt="logo"></a>
+            <div class="nav-wrapper black-text">
                 <a href="index" class="brand-logo">QUANTUM MANAGEMENT</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="carrental">CAR RENTALS</a></li>
-                    <li><a href="properties">PROPERTIES</a></li>
-                    <li><a href="venue">VENUE BOOKINGS</a></li>
-                    <li><a href="news">NEWS & EVENTS</a></li>
-                    <li><a href="membersclub">MEMBERS CLUB</a></li>
-                    <li><a href="about">ABOUT US</a></li>
+                    <li><a href="/"><span class="black-text">HOME</span></a></li>
+                    <li><a href="fleet"><span class="black-text">CAR RENTALS</span></a></li>
+                    <li><a href="properties"><span class="black-text">PROPERTIES</span></a></li>
+                    <li><a href="members-club"><span class="black-text">MEMBERS CLUB</span></a></li>
                 </ul>
             </div>
         </nav>
         <ul class="sidenav" id="mobile-demo">
+            <li><a href="carrental">HOME</a></li>
             <li><a href="index">CAR RENTALS</a></li>
             <li><a href="properties">PROPERTIES</a></li>
-            <li><a href="news">NEWS & EVENTS</a></li>
             <li><a href="membersclub">MEMBERS CLUB</a></li>
-            <li><a href="about">ABOUT US</a></li>
         </ul>
     </header>
     <main>
@@ -42,21 +39,19 @@
     </main>
     <br><br><br><br>
 
-    <footer class="page-footer">
+    <footer class="page-footer amber accent-2">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12 ">
                     <br><br>
-                    <h5 class="white-text">QUANTUM MANAGEMENT</h5>
+                    <h5 class="whitesmoke-text">QUANTUM MANAGEMENT</h5>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <a href="www.facebook.com"><img src="/assets/images/facebook-logo.png" class="facebook" alt="facebook"></a>
-                    <a href="www.instagram.com"><img src="/assets/images/instagram-png-instagram-icon-1600.png" class="instagram"
-                            alt="instagram"></a>
+                    <a href="www.facebook.com"><img src="facebook-logo.png" class="facebook" alt="facebook"></a>
+                    <a href="www.instagram.com"><img src="instagram-png-instagram-icon-1600.png" class="instagram" alt="instagram"></a>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">CONTACT US</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">POLICY</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">FAQ</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/contact">CONTACT US</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/faq">FAQ</a></li>
                     </ul>
                 </div>
             </div>
@@ -72,16 +67,21 @@
 
     <!--components-->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-    <script type="text/javascript" src="/assets/javascript/app.js"></script>
+    <script type="text/javascript" src="javascript/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script>
         $(document).ready(function () {
+            M.AutoInit();
             $('ul.tabs').tabs('select_tab', 'tab_id');
             $(".dropdown-trigger").dropdown();
             $('.sidenav').sidenav();
+            $('input#input_text, textarea#textarea1').characterCounter();
+            $('#textarea1').val('New Text');
+            $('#textarea1').trigger('autoresize');
         });
     </script>
 </body>

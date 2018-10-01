@@ -1,0 +1,111 @@
+p{
+    line-height: 200%;
+}
+.quantum-logo {
+    width: 61%;
+    margin-left: 21%;
+    margin-top: 2%;
+}
+
+.exotic-banner {
+    width: 100%;
+    height: 500px;
+}
+
+.btn {
+    background-color: goldenrod;
+}
+
+.bently-image {
+    width: 100%;
+}
+
+p {
+    color: black !important;
+}
+
+.huracanconvert {
+    width: 80%;
+    z-index: 3;
+}
+
+.lamborghini-dash {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    height: 630px;
+}
+
+.description {
+    font-size: 150%;
+    color: gray !important;
+}
+
+.video {
+    margin-left: 26%;
+}
+
+.tech-icons {
+    margin-top: -46%;
+    width: 108%;
+    background-color: black;
+}
+
+.instagram {
+    width: 15%;
+}
+
+.facebook {
+    width: 16%;
+}
+
+.arrow {
+    width: 120px;
+}
+
+.line {
+    margin-top: 9px;
+    width: 280px;
+    background: #ffe57f;
+    height: 10px;
+    float: left;
+}
+
+.row {
+    margin-left: -22% !important;
+
+}
+
+.newTitle {
+    padding: 15px;
+    color: gray;
+    font-weight: bold;
+}
+
+.car-models {
+    margin-left: 20%;
+}
+
+.car-description {
+    font-size: 150%;
+    color: goldenrod !important;
+}
+
+.gradient {
+    margin-left: 69%;
+    margin-top: -40%;
+    z-index: 2;
+    height: 392px;
+}
+
+#grad {
+    margin-left: 72%;
+    margin-top: -23%;
+
+}
+
+.tech-specs {
+    width: 30%;
+}
+.contactUs{
+    margin-left: 40% !important;
+}
