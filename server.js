@@ -39,26 +39,30 @@ var exoticFleet = [{
         msrp: 320000,
         engine: 602,
         speed: 2.6,
-        transmission: 'F1'
+        transmission: 'F1',
+        image: "avio.jpg"
     },
     {
         name: 'LAMBORGHINI HURACAN CONVERTIBLE',
         msrp: 220000,
         engine: 602,
         speed: 2.6,
-        transmission: 'F1'
+        transmission: 'F1',
+        image: "huracan-convertible.jpg"
     }, {
         name: 'BENTLEY CONTINENTAL GT CONVERTIBLE',
         msrp: 264000,
         engine: 500,
         speed: 2.6,
-        transmission: 'Automatic'
+        transmission: 'Automatic',
+        image: "bentley.jpg"
     }, {
         name: 'MCLAREN 720S',
         msrp: 340000,
         engine: 710,
         speed: 2.6,
-        transmission: 'F1'
+        transmission: 'F1',
+        image: "mclaren.jpg"
     }, {
         name: 'FERRARI ITALIA 458',
         msrp: 313000,
