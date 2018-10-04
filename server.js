@@ -18,12 +18,13 @@ app.set("view engine", "handlebars");
 // app.use(helmet.contentSecurityPolicy(whitelist));
 
 // // install body-parser as middleware
-// const bodyParser = require("body-parser");
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
+app.use(express.urlencoded({
+    extended: true
+}));
+app.use(express.json());
 
 // load other modules
-//const moment = require("moment");
+const moment = require("moment");
 
 
 var exoticFleet = [{
@@ -69,7 +70,7 @@ var exoticFleet = [{
         engine: 570,
         speed: 2.6,
         transmission: 'F1',
-        image:"458.jpg"
+        image: "458.jpg"
     }
 
 ];

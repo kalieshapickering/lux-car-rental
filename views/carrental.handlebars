@@ -1,198 +1,465 @@
+<!--exotic tab-->
+<div id="exotic" class="col s12">
+    <img src="Exotic-Car-Adventure.jpg" class='exotic-banner' alt="exotic banner"><br><br>
+    <!-- dropdown structure-->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">
+                <p>Lamborghini Aventador</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Lamborghini Huracan Avio</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Lamborghini Huracan</p>
+            </a></li>
+        <li><a href="#!">
+                <p>McLaren 720S</p>
+            </a></li>
+            <li><a href="#!">
+                <p>Ferrari Italia 458</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Mercedes S63</p>
+            </a></li>
+        <li><a href="#!">
+                <p>BMW M235</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Audi R8</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Rolls Royce Wraith</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Rolls Royce Ghost</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Mercedes Brabus G63</p>
+            </a></li>
+        <li class="divider"></li>
+        <li><a href="#!">
+                <p>Land Rover Range Rover</p>
+            </a></li>
+    </ul>
 
+    <nav class="nav-extended black">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger btn" data-target="dropdown1">SELECT CAR<i class="material-icons right">dehaze</i></a></li>
+                <li><a class="waves-effect waves-light btn">START DATE <i class="material-icons right">date_range</i></a></li>
+                <li><a class="waves-effect waves-light btn">END DATE <i class="material-icons right">date_range</i></a></li>
+                <li><a class="waves-effect waves-light btn">RENT CAR</a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#exotic">EXOTIC</a></li>
+                <li class="tab"><a href="#sports">SPORT</a></li>
+                <li class="tab"><a href="#suvs">SUVS</a></li>
+                <li class="tab"><a href="#luxury">LUXURY</a></li>
+            </ul>
+        </div>
+    </nav>
 
-                <!--exotic tab-->
-                  <div id="exotic" class="col s12">
-                <img src="Exotic-Car-Adventure.jpg" class='exotic-banner' alt="exotic banner"><br><br>
-               <!-- dropdown structure-->
-               <ul id="dropdown1" class="dropdown-content">
-                    <li><a href="#!"><p>Lamborghini Huracan Avio</p></a></li>
-                    <li><a href="#!"><p>Lamborghini Aventador Convertible</p></a></li>
-                    <li><a href="#!"><p>McLaren</p></a></li>
-                    <li class="divider"></li>
-                    <li ><a href="#!"><p>Range Rover</p></a></li>
-                  </ul>
-                <nav>
-                    <div class="nav-extended black">
-                        <div class="nav-content">
-                      <ul class="tabs tabs-transparent">
-                        <li class="tab"><a class="active" href="#exotic">EXOTIC</a></li>
-                        <li class="tab"><a href="#sports">SPORT</a></li>
-                        <li class="tab"><a href="#suvs">SUVS</a></li>
-                        <li class="tab"><a href="#luxury">LUXURY</a></li>
-                      </ul>
+    <br><br><br>
+    {{!-- exotic fleet --}}
+    <div>
+
+        {{!-- <div class="arrow"> --}}
+            <div class="line"></div>
+        </div>
+        <h5><strong class="newTitle"> OUR EXOTIC FLEET</strong></h5>
+
+    </div>
+    <br><br><br>
+    <div class="container">
+        {{#each ics }}
+        <img src="{{image}}" class="car-image" />
+        <table>
+            <tr>
+                <th>{{name}}</th>
+            </tr>
+            <tr>
+                <td>MRSP: <span> ${{msrp}}</span></td>
+            </tr>
+            <tr>
+                <td>HorsePower: <span> {{engine}}</span></td>
+            </tr>
+            <tr>
+                <td>0/100KM/H: <span> {{speed}}</span></td>
+            </tr>
+            <tr>
+                <td>Transmission: <span> {{transmission}}</span></td>
+            </tr>
+        </table>
+        <br>
+        <a class="waves-effect waves-light btn">TECH SPECS</a>
+        <a class="waves-effect waves-light btn">RENT CAR</a>
+        <br><br>
+        {{/each}}
+
+    </div>
+
+    <!--sport tab-->
+    <div id="sports" class="col s12">
+        <img src="Exotic-Car-Adventure.jpg" class='exotic-banner' alt="exotic banner"><br><br>
+         <!-- dropdown structure-->
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#!">
+                <p>Lamborghini Aventador</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Lamborghini Huracan Avio</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Lamborghini Huracan</p>
+            </a></li>
+        <li><a href="#!">
+                <p>McLaren 720S</p>
+            </a></li>
+            <li><a href="#!">
+                <p>Ferrari Italia 458</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Mercedes S63</p>
+            </a></li>
+        <li><a href="#!">
+                <p>BMW M235</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Audi R8</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Rolls Royce Wraith</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Rolls Royce Ghost</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Mercedes Brabus G63</p>
+            </a></li>
+        <li class="divider"></li>
+        <li><a href="#!">
+                <p>Land Rover Range Rover</p>
+            </a></li>
+    </ul>
+
+    <nav class="nav-extended black">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger btn" data-target="dropdown2">SELECT CAR<i class="material-icons right">dehaze</i></a></li>
+                <li><a class="waves-effect waves-light btn">START DATE <i class="material-icons right">date_range</i></a></li>
+                <li><a class="waves-effect waves-light btn">END DATE <i class="material-icons right">date_range</i></a></li>
+                <li><a class="waves-effect waves-light btn">RENT CAR</a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#exotic">EXOTIC</a></li>
+                <li class="tab"><a href="#sports">SPORT</a></li>
+                <li class="tab"><a href="#suvs">SUVS</a></li>
+                <li class="tab"><a href="#luxury">LUXURY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="arrow">
+                        <div class="line"></div>
                     </div>
-                        <div class="nav-wrapper">
-                          <a href="#!" class="brand-logo"> EXOTIC VEHICLES</a>
-                          <ul class="right hide-on-med-and-down">
-                            <li><a class="dropdown-trigger btn" data-target="dropdown1">SELECT CAR<i class="material-icons right">dehaze</i></a></li>
-                            <li><a class="waves-effect waves-light btn">START DATE <i class="material-icons right">date_range</i></a></li>
-                            <li><a class="waves-effect waves-light btn">END DATE <i class="material-icons right">date_range</i></a></li>
-                            <li><a class="waves-effect waves-light btn">RENT CAR</a></li>  
-                        </ul>
-                        </div>
-                        </div>
-                      </nav>
-                      <div>
-                          <div class="container">
-                              <div class="row">
-                               <div class="arrow">
-                                       <div class="line"></div></div>
-                                     <h5><strong class="newTitle"> OUR FLEET</strong></h5>
-                                     </div>
-                                     </div>
-                          </div>
-                          <div class="container">
-                      <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-           <br>
-                <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-              </div>
-              <br><br>
-                <div class="bently-wrapper">
-                        <img src="maxresdefault.jpg" class="bently-image" alt="bently wrapper">
-                    </div>
-                    <br>
-                    <div class="container">
-                    <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                   <br>
-                   <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                  <br>
+                    <h5><strong class="newTitle"> OUR SPORT FLEET</strong></h5>
+                </div>
             </div>
-          </div>
-           <!--sport tab-->
-                  <div id="sports" class="col s12">
-                      <img src="Exotic-Car-Adventure.jpg" class='exotic-banner' alt="exotic banner"><br><br>
-                      <!-- dropdown structure-->
-                      <ul id="dropdown2" class="dropdown-content">
-                           <li><a href="#!"><p>Mercedes S63</p></a></li>
-                           <li ><a href="#!"><p>BMW M235</p></a></li>
-                           <li class="divider"></li>
-                           <li><a href="#!"><p>Audi R8</p></a></li>
-                         </ul>
-                       <nav>
-                               <div class="nav-wrapper">
-                                 <a href="#!" class="brand-logo">SPORT VEHICLES</a>
-                                 <ul class="right hide-on-med-and-down">
-                                   <li><a class="dropdown-trigger btn" data-target="dropdown3">SELECT CAR<i class="material-icons right">dehaze</i></a></li>
-                                   <li><a class="waves-effect waves-light btn">START DATE <i class="material-icons right">date_range</i></a></li>
-                                   <li><a class="waves-effect waves-light btn">END DATE <i class="material-icons right">date_range</i></a></li>
-                                   <li><a class="waves-effect waves-light btn">RENT CAR</a></li>  
-                               </ul>
-                               </div>
-                             </nav>
-                             <div>
-                                <div class="container">
-                                    <div class="row">
-                                     <div class="arrow">
-                                             <div class="line"></div></div>
-                                           <h5><strong class="newTitle"> OUR FLEET</strong></h5>
-                                           </div>
-                                           </div>
-                                </div>
-                                <div class="container">
-                             <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                  <br>
-                       <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                       <div class="bently-wrapper">
-                               <img src="maxresdefault.jpg" class="bently-image" alt="bently wrapper">
-                           </div>
-                           <br>
-                           <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                          <br>
-                          <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                         <br>
-                   </div>
+        </div>
+        <div class="container">
+            <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела
+                некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не
+                изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да
+                се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се
+                могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор
+                првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста
+                шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem
+                Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
+            <br>
+            <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела
+                некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не
+                изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да
+                се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се
+                могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор
+                првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста
+                шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem
+                Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
+            <div class="bently-wrapper">
+                <img src="maxresdefault.jpg" class="bently-image" alt="bently wrapper">
+            </div>
+            <br>
+            <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела
+                некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не
+                изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да
+                се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се
+                могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор
+                првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста
+                шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem
+                Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
+            <br>
+            <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела
+                некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не
+                изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да
+                се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се
+                могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор
+                првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста
+                шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem
+                Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
+            <br>
+        </div>
 
-                  </div>
+    </div>
+</div>
+</div>
+<!--Luxury SUV tab-->
+<div id="suvs" class="col s12">
+    <img src="Exotic-Car-Adventure.jpg" class='exotic-banner' alt="exotic banner"><br><br>
+      <!-- dropdown structure-->
+    <ul id="dropdown3" class="dropdown-content">
+        <li><a href="#!">
+                <p>Lamborghini Aventador</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Lamborghini Huracan Avio</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Lamborghini Huracan</p>
+            </a></li>
+        <li><a href="#!">
+                <p>McLaren 720S</p>
+            </a></li>
+            <li><a href="#!">
+                <p>Ferrari Italia 458</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Mercedes S63</p>
+            </a></li>
+        <li><a href="#!">
+                <p>BMW M235</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Audi R8</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Rolls Royce Wraith</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Rolls Royce Ghost</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Mercedes Brabus G63</p>
+            </a></li>
+        <li class="divider"></li>
+        <li><a href="#!">
+                <p>Land Rover Range Rover</p>
+            </a></li>
+    </ul>
+
+    <nav class="nav-extended black">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger btn" data-target="dropdown3">SELECT CAR<i class="material-icons right">dehaze</i></a></li>
+                <li><a class="waves-effect waves-light btn">START DATE <i class="material-icons right">date_range</i></a></li>
+                <li><a class="waves-effect waves-light btn">END DATE <i class="material-icons right">date_range</i></a></li>
+                <li><a class="waves-effect waves-light btn">RENT CAR</a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#exotic">EXOTIC</a></li>
+                <li class="tab"><a href="#sports">SPORT</a></li>
+                <li class="tab"><a href="#suvs">SUVS</a></li>
+                <li class="tab"><a href="#luxury">LUXURY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="arrow">
+                    <div class="line"></div>
                 </div>
-                  </div>
-                  <!--Luxury SUV tab-->
-                  <div id="suvs" class="col s12">
-                      <img src="Exotic-Car-Adventure.jpg" class='exotic-banner' alt="exotic banner"><br><br>
-                      <!-- dropdown structure-->
-                      <ul id="dropdown3" class="dropdown-content">
-                           <li><a href="#!"><p>G63</p></a></li>
-                           <li class="divider"></li>
-                           <li ><a href="#!"><p>Range Rover</p></a></li>
-                         </ul>
-                       <nav>
-                               <div class="nav-wrapper">
-                                 <a href="#!" class="brand-logo">LUXURY SUVS</a>
-                                 <ul class="right hide-on-med-and-down">
-                                   <li><a class="dropdown-trigger btn" data-target="dropdown3">SELECT CAR<i class="material-icons right">dehaze</i></a></li>
-                                   <li><a class="waves-effect waves-light btn">START DATE <i class="material-icons right">date_range</i></a></li>
-                                   <li><a class="waves-effect waves-light btn">END DATE <i class="material-icons right">date_range</i></a></li>
-                                   <li><a class="waves-effect waves-light btn">RENT CAR</a></li>  
-                               </ul>
-                               </div>
-                             </nav>
-                             <div>
-                                <div class="container">
-                                    <div class="row">
-                                     <div class="arrow">
-                                             <div class="line"></div></div>
-                                           <h5><strong class="newTitle"> OUR FLEET</strong></h5>
-                                           </div>
-                                           </div>
-                                </div>
-                                <div class="container">
-                             <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                  <br>
-                       <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                       <div class="bently-wrapper">
-                               <img src="maxresdefault.jpg" class="bently-image" alt="bently wrapper">
-                           </div>
-                           <br>
-                           <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                          <br>
-                          <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                         <br>
-                   </div>
+                <h5><strong class="newTitle"> OUR LUXURY SUV FLEET</strong></h5>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву
+            промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа
+            уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у
+            средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на
+            Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на
+            Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би
+            генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање,
+            нема убачен хумор или неке неочекиване речи и тако даље.</p>
+        <br>
+        <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву
+            промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа
+            уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у
+            средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на
+            Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на
+            Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би
+            генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање,
+            нема убачен хумор или неке неочекиване речи и тако даље.</p>
+        <div class="bently-wrapper">
+            <img src="maxresdefault.jpg" class="bently-image" alt="bently wrapper">
+        </div>
+        <br>
+        <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву
+            промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа
+            уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у
+            средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на
+            Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на
+            Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би
+            генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање,
+            нема убачен хумор или неке неочекиване речи и тако даље.</p>
+        <br>
+        <p class="description">Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву
+            промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа
+            уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у
+            средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на
+            Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на
+            Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би
+            генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање,
+            нема убачен хумор или неке неочекиване речи и тако даље.</p>
+        <br>
+    </div>
 
-                  </div>
+</div>
+</div>
+<!--Luxury tab-->
+<div id="luxury" class="col s12">
+
+    <img src="Exotic-Car-Adventure.jpg" class='exotic-banner' alt="exotic banner"><br><br>
+   <!-- dropdown structure-->
+    <ul id="dropdown4" class="dropdown-content">
+        <li><a href="#!">
+                <p>Lamborghini Aventador</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Lamborghini Huracan Avio</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Lamborghini Huracan</p>
+            </a></li>
+        <li><a href="#!">
+                <p>McLaren 720S</p>
+            </a></li>
+            <li><a href="#!">
+                <p>Ferrari Italia 458</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Mercedes S63</p>
+            </a></li>
+        <li><a href="#!">
+                <p>BMW M235</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Audi R8</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Rolls Royce Wraith</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Rolls Royce Ghost</p>
+            </a></li>
+        <li><a href="#!">
+                <p>Mercedes Brabus G63</p>
+            </a></li>
+        <li class="divider"></li>
+        <li><a href="#!">
+                <p>Land Rover Range Rover</p>
+            </a></li>
+    </ul>
+
+    <nav class="nav-extended black">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger btn" data-target="dropdown4">SELECT CAR<i class="material-icons right">dehaze</i></a></li>
+                <li><a class="waves-effect waves-light btn">START DATE <i class="material-icons right">date_range</i></a></li>
+                <li><a class="waves-effect waves-light btn">END DATE <i class="material-icons right">date_range</i></a></li>
+                <li><a class="waves-effect waves-light btn">RENT CAR</a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#exotic">EXOTIC</a></li>
+                <li class="tab"><a href="#sports">SPORT</a></li>
+                <li class="tab"><a href="#suvs">SUVS</a></li>
+                <li class="tab"><a href="#luxury">LUXURY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="arrow">
+                    <div class="line"></div>
                 </div>
-                  <!--Luxury tab-->
-                  <div id="luxury" class="col s12">
-
-                      <img src="Exotic-Car-Adventure.jpg" class='exotic-banner' alt="exotic banner"><br><br>
-                      <!-- dropdown structure-->
-                      <ul id="dropdown4" class="dropdown-content">
-                           <li><a href="#!"><p>Rolls Royce Wraith</p></a></li>
-                           <li><a href="#!"><p>Rolls Royce Ghost</p></a></li>
-                           <li class="divider"></li>
-                           <li ><a href="#!"><p>Mercedes S63</p></a></li>
-                         </ul>
-                       <nav>
-                               <div class="nav-wrapper">
-                                 <a href="#!" class="brand-logo"> LUXURY VEHICLES</a>
-                                 <ul class="right hide-on-med-and-down">
-                                   <li><a class="dropdown-trigger btn" data-target="dropdown4">SELECT CAR<i class="material-icons right">dehaze</i></a></li>
-                                   <li><a class="waves-effect waves-light btn">START DATE <i class="material-icons right">date_range</i></a></li>
-                                   <li><a class="waves-effect waves-light btn">END DATE <i class="material-icons right">date_range</i></a></li>
-                                   <li><a class="waves-effect waves-light btn">RENT CAR</a></li>  
-                               </ul>
-                               </div>
-                             </nav>
-                             <div>
-                                <div class="container">
-                                    <div class="row">
-                                     <div class="arrow">
-                                             <div class="line"></div></div>
-                                           <h5><strong class="newTitle"> OUR FLEET</strong></h5>
-                                           </div>
-                                           </div>
-                                </div>
-                                <div class="conatiner">
-                             <p>Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                  <br>
-                       <p>Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                       <div class="bently-wrapper">
-                               <img src="maxresdefault.jpg" class="bently-image" alt="bently wrapper">
-                           </div>
-                           <br>
-                           <p>Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                          <br>
-                          <p>Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке неочекиване речи и тако даље.</p>
-                         <br>
-                   </div>
-                  </div>
+                <h5><strong class="newTitle"> OUR LUXURY FLEET</strong></h5>
+            </div>
+        </div>
+    </div>
+    <div class="conatiner">
+        <p>Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је
+            то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да
+            користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека
+            сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да
+            понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник
+            од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који
+            изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке
+            неочекиване речи и тако даље.</p>
+        <br>
+        <p>Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је
+            то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да
+            користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека
+            сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да
+            понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник
+            од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који
+            изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке
+            неочекиване речи и тако даље.</p>
+        <div class="bently-wrapper">
+            <img src="maxresdefault.jpg" class="bently-image" alt="bently wrapper">
+        </div>
+        <br>
+        <p>Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је
+            то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да
+            користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека
+            сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да
+            понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник
+            од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који
+            изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке
+            неочекиване речи и тако даље.</p>
+        <br>
+        <p>Постоји много верзија и варијација Lorem Ipsum пасуса, али већина је претрпела некакву промену, било да је
+            то додавање неког хумора или насумична респодела речи која на крају не изгледа уверљиво. Ако планирате да
+            користите пасусе Lorem Ipsum модела, требало би да будете сигурни да се у средини текста не крије нека
+            сакривена или срамотна порука. Сви Lorem Ipsum генератори који се могу наћи на Интернету су направљени да
+            понављају предходно дефинисане делове, што чини овај генератор првим правим на Интернету. Он користи речник
+            од 200 латинских речи које су комбиноване са подоста шаблона реченица како би генерисао Lorem Ipsum који
+            изгледа уверљиво. То значи да овде генерисани Lorem Ipsum не садржи понављање, нема убачен хумор или неке
+            неочекиване речи и тако даље.</p>
+        <br>
+    </div>
+</div>
 </div>
