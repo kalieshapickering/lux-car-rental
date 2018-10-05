@@ -8,20 +8,23 @@ const fs = require("fs");
 
 // import JSON fleet
 const fleet = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "models", "fleet.json")));
-const all = [];
-// TODO: continue this so that it works
-Object.keys(fleet).map(type => all.concat(fleet[type]));
-console.log(all);
+// create all as a JSON array that holds all vehicle objects without seperation by type
+let all = [];
+// parse fleet into all
+Object.keys(fleet).map(type => all = all.concat(fleet[type]));
 
-console.log(all);
+// optional vehicle parameter to access either all or fleet[name]
 router.get("/fleet/:name?", function (req, res) {
-    console.log(req.params.name);
+    // TODO: if req.params is defined...
     res.render("car-pages", {
+        // ...render car-pages with fleet[name]
         ics: fleet[req.params.name]
     });
+    // TODO: else...
+    // TODO: ... render all
 });
 
-// root handlebar will be modified to show case all vehicles by joining keys of fleet object
+// TODO: access all?
 router.get("/", function (req, res) {
     res.render("index", {
         ics: fleet

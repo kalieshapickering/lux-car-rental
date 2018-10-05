@@ -11,9 +11,9 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
-// // install helmet 
-const helmet = require("helmet");
-app.use(helmet());
+// helmet to be installed in post-development
+// const helmet = require("helmet");
+// app.use(helmet());
 
 // CSP temporarily disabled for development
 // const whitelist = require(path.join(__dirname, "app", "assets", "security", "whitelist.js"));
@@ -26,10 +26,11 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 // load and use routes set in the controller
-var routes = require(path.join('.', 'controllers', 'quantumController'));
+const routes = require(path.join(__dirname, 'controllers', 'quantumController.js'));
+
 app.use(routes);
 
-//load app contents
+//load app contents -- change to just `app.use(express.static('public'));`
 app.use(express.static('public/images'));
 app.use(express.static('public/css'));
 app.use(express.static('public/javascript'));
