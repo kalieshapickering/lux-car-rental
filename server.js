@@ -11,7 +11,7 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
-// helmet to be installed in post-development
+// helmet to be installed in post-development and from another file under security directory
 // const helmet = require("helmet");
 // app.use(helmet());
 // CSP
