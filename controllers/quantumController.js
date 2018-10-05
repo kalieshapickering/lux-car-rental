@@ -1,23 +1,37 @@
-var express = require("express");
+// import express and app router
+const express = require("express");
+const router = express.Router();
 
-var router = express.Router();
+// file system modules
+const path = require("path");
+const fs = require("fs");
 
-router.get("/fleet/:name", function (req, res) {
+// import JSON fleet
+const fleet = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "models", "fleet.json")));
+const all = [];
+// TODO: continue this so that it works
+Object.keys(fleet).map(type => all.concat(fleet[type]));
+console.log(all);
+
+console.log(all);
+router.get("/fleet/:name?", function (req, res) {
+    console.log(req.params.name);
     res.render("car-pages", {
-        ics: exoticFleet
+        ics: fleet[req.params.name]
     });
 });
 
+// root handlebar will be modified to show case all vehicles by joining keys of fleet object
 router.get("/", function (req, res) {
     res.render("index", {
-        ics: exoticFleet
+        ics: fleet
     });
 });
-router.get("/fleet", function (req, res) {
-    res.render("carrental", {
-        ics: exoticFleet
-    });
-});
+// router.get("/fleet", function (req, res) {
+//     res.render("carrental", {
+//         ics: exoticFleet
+//     });
+// });
 
 router.get("/contact", function (req, res) {
     res.render("contact", {
