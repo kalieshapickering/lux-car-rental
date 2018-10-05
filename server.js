@@ -1,7 +1,9 @@
-// load express
+// load express and handlebars
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
+
+const path = require("path");
 
 //load Handlebars template engine
 app.engine("handlebars", exphbs({
@@ -23,9 +25,9 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
-// load other modules
-const moment = require("moment");
-
+// load and use routes set in the controller
+var routes = require(path.join('.', 'controllers', 'quantumController'));
+app.use(routes);
 
 var exoticFleet = [{
         name: 'LAMBORGHINI AVENTADOR CONVERTIBLE',
