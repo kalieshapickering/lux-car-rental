@@ -15,47 +15,47 @@ Object.keys(fleet).map(type => all = all.concat(fleet[type]));
 
 // optional vehicle parameter to access either all or fleet[name]
 router.get("/fleet/:name?", function (req, res) {
-    // TODO: if req.params is defined...
-    res.render("car-pages", {
-        // ...render car-pages with fleet[name]
-        ics: fleet[req.params.name]
-    });
+    if (req.params.name) {
+        res.render("car-pages", {
+            // ...render car-pages with fleet[name]
+            ics: fleet[req.params.name]
+        });
+    } else {
+        // otherwise render all cars
+        res.render("car-pages", {
+            ics: all
+        });
+    }
     // TODO: else...
-    // TODO: ... render all
+    // TODO: ...render all
 });
 
-// TODO: access all?
 router.get("/", function (req, res) {
     res.render("index", {
-        ics: fleet
+        ics: all
     });
 });
-// router.get("/fleet", function (req, res) {
-//     res.render("carrental", {
-//         ics: exoticFleet
-//     });
-// });
 
 router.get("/contact", function (req, res) {
     res.render("contact", {
-        ics: exoticFleet
+        ics: fleet
     });
 });
 
 router.get("/members-club", function (req, res) {
     res.render("members-club", {
-        ics: exoticFleet
+        ics: fleet
     });
 });
 
 router.get("/properties", function (req, res) {
     res.render("properties", {
-        ics: exoticFleet
+        ics: fleet
     });
 });
 router.get("/faq", function (req, res) {
     res.render("faq", {
-        ics: exoticFleet
+        ics: fleet
     });
 });
 

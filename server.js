@@ -14,12 +14,11 @@ app.set("view engine", "handlebars");
 // helmet to be installed in post-development
 // const helmet = require("helmet");
 // app.use(helmet());
-
-// CSP temporarily disabled for development
+// CSP
 // const whitelist = require(path.join(__dirname, "app", "assets", "security", "whitelist.js"));
 // app.use(helmet.contentSecurityPolicy(whitelist));
 
-// // install body-parser as middleware
+// install body-parser as middleware
 app.use(express.urlencoded({
     extended: true
 }));
@@ -27,26 +26,16 @@ app.use(express.json());
 
 // load and use routes set in the controller
 const routes = require(path.join(__dirname, 'controllers', 'quantumController.js'));
-
 app.use(routes);
 
-//load app contents -- change to just `app.use(express.static('public'));`
-app.use(express.static('public/images'));
-app.use(express.static('public/css'));
-app.use(express.static('public/javascript'));
-
-// route static resources
-//app.use(express.static(path.join(__dirname, "app")));
+// set static resources
+app.use(express.static(path.join(__dirname, 'public')));
 
 // API routing
 //require(path.join(__dirname, "app", "routing", "apiRouting.js"))(app, path, fs, moment);
-// static routing
-//require(path.join(__dirname, "app", "routing", "staticRouting.js"))(app, path);
 
-// set dynamic port
+// set dynamic port and listen
 app.set("port", process.env.PORT || 8080);
-
-// listen to port
 app.listen(app.get("port"), function () {
     console.log("Listening on port " + app.get("port"));
 });
