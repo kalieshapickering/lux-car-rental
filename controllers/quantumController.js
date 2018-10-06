@@ -1,44 +1,61 @@
-var express = require("express");
+// import express and app router
+const express = require("express");
+const router = express.Router();
 
-var router = express.Router();
+// file system modules
+const path = require("path");
+const fs = require("fs");
 
-app.get("/fleet/:name", function (req, res) {
-    res.render("car-pages", {
-        ics: exoticFleet
-    });
+// import JSON fleet
+const fleet = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "models", "fleet.json")));
+// create all as a JSON array that holds all vehicle objects without seperation by type
+let all = [];
+// parse fleet into all
+Object.keys(fleet).map(type => all = all.concat(fleet[type]));
+
+// optional vehicle parameter to access either all or fleet[name]
+router.get("/fleet/:name?", function (req, res) {
+    if (req.params.name) {
+        res.render("car-pages", {
+            // ...render car-pages with fleet[name]
+            ics: fleet[req.params.name]
+        });
+    } else {
+        // otherwise render all cars
+        res.render("car-pages", {
+            ics: all
+        });
+    }
+    // TODO: else...
+    // TODO: ...render all
 });
 
-app.get("/", function (req, res) {
+router.get("/", function (req, res) {
     res.render("index", {
-        ics: exoticFleet
-    });
-});
-app.get("/fleet", function (req, res) {
-    res.render("carrental", {
-        ics: exoticFleet
+        ics: all
     });
 });
 
-app.get("/contact", function (req, res) {
+router.get("/contact", function (req, res) {
     res.render("contact", {
-        ics: exoticFleet
+        ics: fleet
     });
 });
 
-app.get("/members-club", function (req, res) {
+router.get("/members-club", function (req, res) {
     res.render("members-club", {
-        ics: exoticFleet
+        ics: fleet
     });
 });
 
-app.get("/properties", function (req, res) {
+router.get("/properties", function (req, res) {
     res.render("properties", {
-        ics: exoticFleet
+        ics: fleet
     });
 });
-app.get("/faq", function (req, res) {
+router.get("/faq", function (req, res) {
     res.render("faq", {
-        ics: exoticFleet
+        ics: fleet
     });
 });
 
