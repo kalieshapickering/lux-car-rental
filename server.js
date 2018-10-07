@@ -21,12 +21,6 @@ app.set("view engine", "handlebars");
 // const whitelist = require(path.join(__dirname, "app", "assets", "security", "whitelist.js"));
 // app.use(helmet.contentSecurityPolicy(whitelist));
 
-// install body-parser as middleware
-app.use(express.urlencoded({
-    extended: true
-}));
-app.use(express.json());
-
 // load and use routes set in the controller
 const routes = require(path.join(__dirname, 'controllers', 'quantumController.js'));
 app.use(routes);
