@@ -6,7 +6,12 @@
             "engine": 700,
             "speed": 2.6,
             "transmission": "F1",
-            "image": "lamborghini.jpg"
+            "image": "lamborghini.jpg",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         },
         {
             "name": "LAMBORGHINI HURACAN AVIO",
@@ -14,7 +19,12 @@
             "engine": 602,
             "speed": 2.6,
             "transmission": "F1",
-            "image": "avio.jpg"
+            "image": "avio.jpg",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         },
         {
             "name": "LAMBORGHINI HURACAN CONVERTIBLE",
@@ -22,7 +32,12 @@
             "engine": 602,
             "speed": 2.6,
             "transmission": "F1",
-            "image": "huracan-convertible.jpg"
+            "image": "huracan-convertible.jpg",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         },
         {
             "name": "BENTLEY CONTINENTAL GT CONVERTIBLE",
@@ -30,7 +45,12 @@
             "engine": 500,
             "speed": 2.6,
             "transmission": "Automatic",
-            "image": "bentley.jpg"
+            "image": "bentley.jpg",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         },
         {
             "name": "MCLAREN 720S",
@@ -38,7 +58,12 @@
             "engine": 710,
             "speed": 2.6,
             "transmission": "F1",
-            "image": "mclaren.jpg"
+            "image": "mclaren.jpg",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         },
         {
             "name": "FERRARI ITALIA 458",
@@ -46,7 +71,12 @@
             "engine": 570,
             "speed": 2.6,
             "transmission": "F1",
-            "image": "458.jpg"
+            "image": "458.jpg",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         }
     ],
     "suv": [
@@ -55,7 +85,13 @@
             "msrp": 229000,
             "engine": 850,
             "speed": 4.5,
-            "transmission": "Automatic"
+            "transmission": "Automatic",
+            "image": "",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         },
         {
             "name": "LAND ROVER RANGE ROVER",
@@ -63,7 +99,12 @@
             "engine": 575,
             "speed": 4.5,
             "transmission": "Automatic",
-            "image": "Range-Rover-Sport.jpg"
+            "image": "Range-Rover-Sport.jpg",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         }
     ],
     "luxury": [
@@ -72,14 +113,26 @@
             "msrp": 462000,
             "engine": 624,
             "speed": 4.5,
-            "transmission": "Automatic"
+            "transmission": "Automatic",
+            "image": "",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         },
         {
             "name": "ROLLS ROYCE GHOST",
             "msrp": 347000,
             "engine": 562,
             "speed": 4.5,
-            "transmission": "Automatic"
+            "transmission": "Automatic",
+            "image": "",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         }
     ],
     "sport": [
@@ -89,21 +142,38 @@
             "engine": 602,
             "speed": 4.5,
             "transmission": "Automatic",
-            "image": "R8.jpg"
+            "image": "R8.jpg",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         },
         {
             "name": "MERCEDES-BENZ S63",
             "msrp": 160000,
             "engine": 603,
             "speed": 4.5,
-            "transmission": "Automatic"
+            "transmission": "Automatic",
+            "image": "",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         },
         {
             "name": "BMW M235 CONVERTIBLE",
             "msrp": 80000,
             "engine": 320,
             "speed": 4.5,
-            "transmission": "Automatic"
+            "transmission": "Automatic",
+            "image": "",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            }
         }
     ]
 }

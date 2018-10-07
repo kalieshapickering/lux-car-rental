@@ -9,25 +9,42 @@ const fs = require("fs");
 // import JSON fleet
 const fleet = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "models", "fleet.json")));
 // create all as a JSON array that holds all vehicle objects without seperation by type
-let all = [];
+let all = {};
+let fleet2 = {};
 // parse fleet into all
-Object.keys(fleet).map(type => all = all.concat(fleet[type]));
+Object.keys(fleet).map(type => {
+    fleet[type].forEach((vehicle, i) => {
+        // declaring the new key name
+        all[vehicle.name.toLowerCase().replace(/ /g,'')] = vehicle;
+        // dev line to modify fleet.json to hold raw names
+        fleet2[type][i]
+    });
+});
+console.log(all);
 
 // optional vehicle parameter to access either all or fleet[name]
 router.get("/fleet/:name?", function (req, res) {
+    // if name is defined
     if (req.params.name) {
-        res.render("car-pages", {
-            // ...render car-pages with fleet[name]
-            ics: fleet[req.params.name]
-        });
+        // if this name is inside the object
+        if (fleet[req.params.name]) {
+            // render that class' fleet
+            res.render("carrental", {
+                cars: fleet[req.params.name]
+            });
+        } else if (Object.keys(all).includes(req.params.name)) {
+            // res.render("tech-specs", {
+                // use fleet[name] and fleet[name][tech-specs]
+            // });
+        } else {
+            // otherwise, redirect to /fleet/exotic
+            res.redirect("/fleet/exotic");
+        }
+        // else, redirect to /fleet/exotic
     } else {
-        // otherwise render all cars
-        res.render("car-pages", {
-            ics: all
-        });
+        // else change the url to /fleet/exotic
+        res.redirect("/fleet/exotic");
     }
-    // TODO: else...
-    // TODO: ...render all
 });
 
 router.get("/", function (req, res) {
