@@ -5,7 +5,10 @@ const app = express();
 
 const path = require("path");
 
-//load Handlebars template engine
+// load sequelize models
+const db = require(path.join(__dirname, "models"));
+
+// load Handlebars template engine
 app.engine("handlebars", exphbs({
     defaultLayout: "main"
 }));
@@ -36,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // set dynamic port and listen
 app.set("port", process.env.PORT || 8080);
-app.listen(app.get("port"), function () {
-    console.log("Listening on port " + app.get("port"));
+db.sequelize.sync().then(() => {
+    app.listen(app.get("port"), function () {
+        console.log("Listening on port " + app.get("port"));
+    });
 });
