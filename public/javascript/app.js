@@ -1,45 +1,32 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
-$(function() {
-    $(".change-sleep").on("click", function(event) {
-      var id = $(this).data("id");
-      var newSleep = $(this).data("newsleep");
-  
-      var newSleepState = {
-        sleepy: newSleep
-      };
-  
-      // Send the PUT request.
-      $.ajax("/api/cats/" + id, {
-        type: "PUT",
-        data: newSleepState
-      }).then(
-        function() {
-          console.log("changed sleep to", newSleep);
-          // Reload the page to get the updated list
-          location.reload();
-        }
-      );
+$("#submit-btn").on("click", function (event) {
+  console.log("Data accepted")
+  event.preventDefault();
+  var newMessage = {
+    firstName: $("#firstInput").val().trim(),
+    lastName: $('#lastNameInput').val().trim(),
+    phoneNumber: $("#phoneNumberInput").val().trim(),
+    emailAdress: $("#emailInput").val().trim(),
+    message: $("#messageInput").val().trim()
+
+  };
+
+
+  $.post("/api/contactus", newMessage)
+    .then(function (data) {
+      console.log("contact.handlebars", data);
+      alert("Your Mesage has been Recevied!");
     });
-  
-    $(".create-form").on("submit", function(event) {
-      // Make sure to preventDefault on a submit event.
-      event.preventDefault();
-  
-      var newCat = {
-        name: $("#ca").val().trim(),
-        sleepy: $("[name=sleepy]:checked").val().trim()
-      };
-  
-      // Send the POST request.
-      $.ajax("/api/cats", {
-        type: "POST",
-        data: newCat
-      }).then(
-        function() {
-          console.log("created new cat");
-          // Reload the page to get the updated list
-          location.reload();
-        }
-      );
-    });
-  });
+
+
+
+  $("#firstInput").val("");
+  $("#lastNameInput").val("");
+  $("#phoneNumberInput").val("");
+  $("#emailInput").val("");
+  $("#messageInput").val("");
+
+
+
+
+
+});
