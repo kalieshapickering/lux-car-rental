@@ -11,7 +11,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "lamborghiniaventadorconvertible"
         },
         {
             "name": "LAMBORGHINI HURACAN AVIO",
@@ -24,7 +25,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "lamborghinihuracanavio"
         },
         {
             "name": "LAMBORGHINI HURACAN CONVERTIBLE",
@@ -37,7 +39,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "lamborghinihuracanconvertible"
         },
         {
             "name": "BENTLEY CONTINENTAL GT CONVERTIBLE",
@@ -50,7 +53,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "bentleycontinentalgtconvertible"
         },
         {
             "name": "MCLAREN 720S",
@@ -63,7 +67,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "mclaren720s"
         },
         {
             "name": "FERRARI ITALIA 458",
@@ -76,7 +81,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "ferrariitalia458"
         }
     ],
     "suv": [
@@ -91,7 +97,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "mercedes-benzg63brabus"
         },
         {
             "name": "LAND ROVER RANGE ROVER",
@@ -104,7 +111,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "landroverrangerover"
         }
     ],
     "luxury": [
@@ -119,7 +127,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "rollsroycewraith"
         },
         {
             "name": "ROLLS ROYCE GHOST",
@@ -132,7 +141,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "rollsroyceghost"
         }
     ],
     "sport": [
@@ -147,7 +157,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "audir8"
         },
         {
             "name": "MERCEDES-BENZ S63",
@@ -160,7 +171,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "mercedes-benzs63"
         },
         {
             "name": "BMW M235 CONVERTIBLE",
@@ -173,7 +185,8 @@
                 "dashImage": "",
                 "bio": "",
                 "video": ""
-            }
+            },
+            "raw": "bmwm235convertible"
         }
     ]
 }

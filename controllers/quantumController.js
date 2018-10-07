@@ -10,17 +10,14 @@ const fs = require("fs");
 const fleet = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "models", "fleet.json")));
 // create all as a JSON array that holds all vehicle objects without seperation by type
 let all = {};
-let fleet2 = {};
 // parse fleet into all
 Object.keys(fleet).map(type => {
-    fleet[type].forEach((vehicle, i) => {
+    fleet[type].forEach((vehicle) => {
         // declaring the new key name
-        all[vehicle.name.toLowerCase().replace(/ /g,'')] = vehicle;
+        all[vehicle.raw] = vehicle;
         // dev line to modify fleet.json to hold raw names
-        fleet2[type][i]
     });
 });
-console.log(all);
 
 // optional vehicle parameter to access either all or fleet[name]
 router.get("/fleet/:name?", function (req, res) {
@@ -34,7 +31,7 @@ router.get("/fleet/:name?", function (req, res) {
             });
         } else if (Object.keys(all).includes(req.params.name)) {
             // res.render("tech-specs", {
-                // use fleet[name] and fleet[name][tech-specs]
+                // use all[req.params.name]
             // });
         } else {
             // otherwise, redirect to /fleet/exotic
