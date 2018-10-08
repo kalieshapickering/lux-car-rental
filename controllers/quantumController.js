@@ -1,10 +1,18 @@
 // import express and app router
 const express = require("express");
+const app = express();
+// install body-parser as middleware
+const bodyParser = require("body-parser");
+
 const router = express.Router();
+router.use(bodyParser.urlencoded({ extended: true }));
+router.use(bodyParser.json());
 
 // file system modules
 const path = require("path");
 const fs = require("fs");
+
+const db = require(path.join(__dirname, "..", "models"));
 
 // import JSON fleet
 const fleet = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "models", "fleet.json")));
@@ -70,6 +78,26 @@ router.get("/properties", function (req, res) {
 router.get("/faq", function (req, res) {
     res.render("faq", {
         ics: fleet
+    });
+});
+
+// API route
+router.post("/api/rentme", function(req, res) {
+    console.log(req.body);
+    db.posts.create({
+        req_loc: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        phone: req.body.phone,
+        vehicle: req.body.vehicle,
+        start_date: req.body.start_date,
+        end_date: req.body.end_date
+    }).then((client) => {
+        console.log(client);
+        // temporarily ending post request
+        // will send back a more sophisticated response when the corresponding view is created
+        res.end();
     });
 });
 
