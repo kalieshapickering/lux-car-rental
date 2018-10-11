@@ -116,3 +116,17 @@ p {
     width: 100%;
     height: 573px;
 }
+.canoe{
+    margin-left: 50%;
+    margin-top: 11%;
+}
+.benefits{
+    margin-left: 20%;
+    margin-top: 19%;
+    font-size: large;
+    color: gray !important;
+}
+.members{
+    font-size: large;
+    color: gray !important;
+}
