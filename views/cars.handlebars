@@ -1,0 +1,26 @@
+{{#each ics }}
+
+  <img src="/images/{{image}}" class="car-image" />
+ 
+  <table>
+    <tr>
+      <th>{{name}}</th>
+    </tr>
+    <tr>
+      <td>MRSP: <span> ${{msrp}}</span></td>
+    </tr>
+    <tr>
+      <td>HorsePower: <span> {{engine}}</span></td>
+    </tr>
+    <tr>
+      <td>0/100KM/H: <span> {{speed}}</span></td>
+    </tr>
+    <tr>
+      <td>Transmission: <span> {{transmission}}</span></td>
+    </tr>
+  </table>
+  <br>
+  <a href="/fleet/{{raw}}" class="waves-effect waves-light btn">TECH SPECS</a>
+  <button class="waves-effect waves-light btn" id="rent-btn" type="submit" name="action">RENT CAR</button>
+  <br><br>
+  {{/each}}

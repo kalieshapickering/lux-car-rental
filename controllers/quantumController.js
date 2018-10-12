@@ -63,6 +63,11 @@ router.get("/contact", function (req, res) {
         ics: fleet
     });
 });
+router.get("/cars", function (req, res) {
+    res.render("cars", {
+        ics: all
+    });
+});
 
 router.get("/members-club", function (req, res) {
     res.render("members-club", {
