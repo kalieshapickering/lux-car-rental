@@ -1,6 +1,20 @@
 {
     "exotic": [
         {
+            "name": "LAMBORGHINI AVENTADOR",
+            "msrp": 450000,
+            "engine": 700,
+            "speed": 2.6,
+            "transmission": "F1",
+            "image": "aventador.jpg",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            },
+            "raw": "lamborghiniaventador"
+        },
+        {
             "name": "LAMBORGHINI AVENTADOR CONVERTIBLE",
             "msrp": 450000,
             "engine": 700,
@@ -150,7 +164,7 @@
             "engine": 562,
             "speed": 4.5,
             "transmission": "Automatic",
-            "image": "rollsroyceghost.jpg",
+            "image": "rolls-ghost.jpeg",
             "tech-specs": {
                 "dashImage": "",
                 "bio": "",
@@ -173,6 +187,20 @@
                 "video": ""
             },
             "raw": "audir8"
+        },
+        {
+            "name": "AUDI R8",
+            "msrp": 220000,
+            "engine": 602,
+            "speed": 4.5,
+            "transmission": "Automatic",
+            "image": "rd-black.jpg",
+            "tech-specs": {
+                "dashImage": "",
+                "bio": "",
+                "video": ""
+            },
+            "raw": "audir8blk"
         },
         {
             "name": "MERCEDES-BENZ S63 SEDAN",
