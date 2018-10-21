@@ -1,3 +1,19 @@
+$(document).ready(function () {
+  M.AutoInit();
+  $('ul.tabs').tabs('select_tab', 'tab_id');
+  $(".dropdown-trigger").dropdown();
+  $('.sidenav').sidenav();
+  $('input#input_text, textarea#textarea1').characterCounter();
+  $('#textarea1').val('New Text');
+  $('#textarea1').trigger('autoresize');
+  $('.parallax').parallax();
+  $('.slider').slider();
+  $('.carousel').carousel();
+  $('.modal').modal();
+  $('.datepicker').datepicker();
+  $('.timepicker').timepicker();
+});
+
 $("#submit-btn").on("click", function (event) {
   console.log("Data accepted")
   event.preventDefault();

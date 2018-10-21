@@ -1,35 +1,84 @@
 <div>
-    
-</div>
-<div class="container">
-    <div class="row">
-     <div class="col s6 offset-s6">
-  {{#each cars }}
 
-  <img src="/images/{{image}}" class="car-image" />
- 
-  <table>
-    <tr>
-      <th>{{name}}</th>
-    </tr>
-    <tr>
-      <td>MRSP: <span> ${{msrp}}</span></td>
-    </tr>
-    <tr>
-      <td>HorsePower: <span> {{engine}}</span></td>
-    </tr>
-    <tr>
-      <td>0/100KM/H: <span> {{speed}}</span></td>
-    </tr>
-    <tr>
-      <td>Transmission: <span> {{transmission}}</span></td>
-    </tr>
-  </table>
-  <br>
-  <a href="/fleet/{{raw}}" class="waves-effect waves-light btn">TECH SPECS</a>
-  <button class="waves-effect waves-light btn" id="rent-btn" type="submit" name="action">RENT CAR</button>
-  <br><br>
-  {{/each}}
 </div>
-</div>
-</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col  offset-s3">
+      {{#each cars }}
+
+      <img src="/images/{{image}}" class="car-image" />
+
+      <table class="carSpecs">
+        <tr>
+          <th>{{name}}</th>
+        </tr>
+        <tr>
+          <td>MRSP: <span> ${{msrp}}</span></td>
+        </tr>
+        <tr>
+          <td>HorsePower: <span> {{engine}}</span></td>
+        </tr>
+        <tr>
+          <td>0/100KM/H: <span> {{speed}}</span></td>
+        </tr>
+        <tr>
+          <td>Transmission: <span> {{transmission}}</span></td>
+        </tr>
+        <tr>
+          <td>
+<a href="/fleet/{{raw}}" class="waves-effect waves-light btn">TECH SPECS</a>
+          </td>
+          <td>
+   <button class="waves-effect waves-light btn modal-trigger" id="rent-btn" data-target="modal1" class="btn modal-trigger">RENT
+        CAR</button>
+          </td>
+        </tr>
+      </table>
+      <br>
+   
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>RENT OUR {{this.name}}</h4>
+          <br>
+          <div class="input-field col s4">
+            <input placeholder="John" id="firstInput" type="text" class="validate">
+            <label for="firstInput">First Name</label>
+          </div>
+          <div class="input-field col s">
+            <input placeholder="Smith" id="lastNameInput" type="text" class="validate">
+            <label for="lastNameInput">Last Name</label>
+          </div>
+          {{!-- <div class="row"> --}}
+            <div class="input-field col s8">
+              <input placeholder="P(555)-555-555" id="phoneNumberInput" type="number" class="validate">
+              <label for="phoneNumberInput">Phone Number</label>
+            </div>
+            {{!-- <div class="row"> --}}
+              <div class="input-field col s10">
+                <input placeholder="your@email.com" id="emailInput" type="email" class="validate">
+                <label for="emailInput">Email</label>
+              </div>
+              {{!-- Date Picker --}}
+            <div class="input-field col s4">
+              <input placeholder="Start Date" id="startDate" type="text" class="datepicker">
+            </div>
+            <div class="input-field col s4">
+              <input placeholder="Return Date" id="returnDate" type="text" class="datepicker">
+            </div>
+            {{!-- Time picker --}}
+              <div class="input-field col s4">
+              <input placeholder="Pick-up Time" id="pickup" type="text" class="timepicker">
+            </div>
+            </div>
+            {{!--footer--}}
+            <div class="modal-footer col s11">
+              <a href="#!" class="modal-close waves-effect waves-yellow btn-flat">Submit</a>
+            </div>
+          </div>
+          <br><br>
+          {{/each}}
+        </div>
+      </div>
+    </div>

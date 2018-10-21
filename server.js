@@ -28,6 +28,14 @@ app.use(routes);
 // set static resources
 app.use(express.static(path.join(__dirname, 'public')));
 
+var syncOptions = { force: false };
+
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = true;
+}
+
 // API routing
 //require(path.join(__dirname, "app", "routing", "apiRouting.js"))(app, path, fs, moment);
 

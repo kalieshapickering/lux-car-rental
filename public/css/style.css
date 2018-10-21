@@ -130,3 +130,17 @@ p {
     font-size: large;
     color: gray !important;
 }
+.datepicker-date-display{
+    background-color: #dec923 !important;
+}
+.timepicker-digital-display{
+    background-color: #dec923 !important;
+}
+.carSpecs{
+    margin-left: 112%;
+    margin-top: -66%;
+}
+.serviceImg{
+    width: 365px !important;
+    height: 300px !important;
+}
